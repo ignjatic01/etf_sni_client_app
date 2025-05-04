@@ -1,0 +1,36 @@
+<div class="d-flex align-items-center justify-content-center min-vh-100">
+    <main class="form-signin w-50 m-auto" style="max-width: 500px;">
+      <form [formGroup]="form">
+        <h1 class="h3 mb-3 fw-normal">Registracija</h1>
+  
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" formControlName="ime" placeholder="Unesite ime" required="required">
+          <label for="floatingIme">Ime</label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" formControlName="prezime" placeholder="Unesite prezime" required="required">
+          <label for="floatingPrezime">Prezime</label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" formControlName="username" placeholder="Unesite korisničko ime" required="required">
+          <label for="floatingUsername">Korisničko ime</label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" formControlName="email" placeholder="Unesite email" required="required">
+          <label for="floatingEmail">Email</label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" formControlName="password" placeholder="Unesite lozinku" required="required">
+          <label for="floatingPassword">Lozinka</label>
+        </div>
+  
+        <button class="btn custom-green w-100 py-2" (click)="save()" [disabled]="form.invalid">Registruj se</button>
+      </form>
+      <p class="err-msg">{{ errorMessage }}</p>
+    </main>
+  </div>
+  

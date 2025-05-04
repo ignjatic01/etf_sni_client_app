@@ -1,0 +1,24 @@
+<div class="container mt-5" *ngIf="!showPayment">
+    <form [formGroup]="insuranceForm" (ngSubmit)="onSubmit()" class="card p-4 shadow" style="max-width: 500px; margin: 0 auto;">
+      <h3 class="text-center mb-4">Osiguranje</h3>
+  
+      <div class="mb-3">
+        <label for="tip" class="form-label">Tip osiguranja</label>
+        <select class="form-select" id="tip" formControlName="tipOsiguranjaId">
+          <option *ngFor="let tip of tips" [value]="tip.id">{{ tip.naziv }}, Rizik = {{ tip.rizik }}</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="suma" class="form-label">Osigurana suma (EUR)</label>
+        <input type="number" min="100" class="form-control" id="suma" formControlName="iznosOsiguranja" />
+      </div>
+  
+      <div class="mb-4">
+        <label for="trajanje" class="form-label">Trajanje (mjeseci)</label>
+        <input type="number" min="1" class="form-control" id="trajanje" formControlName="trajanje" />
+      </div>
+  
+      <button type="submit" class="btn custom-green w-100 py-2">Nastavi na uplatu</button>
+    </form>
+  </div>

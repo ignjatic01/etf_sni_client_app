@@ -1,0 +1,25 @@
+.custom-green {
+  background-color: blueviolet;
+  border-color: blueviolet;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.custom-green:hover {
+  background-color: darkslateblue;
+  border-color: darkslateblue;
+  color: gray;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-Link:hover {
+    color: gray;
+}
+
+.err-msg {
+  color: red;
+}
